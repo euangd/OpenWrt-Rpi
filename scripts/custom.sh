@@ -25,8 +25,11 @@ popd
 # Change default shell to zsh
 sed -i 's/\/bin\/ash/\/usr\/bin\/zsh/g' package/base-files/files/etc/passwd
 
-  mkdir -p files/lib/firmware/brcm
-  wget -P files/lib/firmware/brcm/ https://github.com/RPi-Distro/firmware-nonfree/raw/bullseye/debian/config/brcm80211/brcm/brcmfmac43436-sdio.bin
-  wget -P files/lib/firmware/brcm/ https://github.com/RPi-Distro/firmware-nonfree/raw/bullseye/debian/config/brcm80211/brcm/brcmfmac43436-sdio.txt
-  wget -P files/lib/firmware/brcm/ https://github.com/RPi-Distro/firmware-nonfree/raw/bullseye/debian/config/brcm80211/brcm/brcmfmac43436s-sdio.bin
-  wget -P files/lib/firmware/brcm/ https://github.com/RPi-Distro/firmware-nonfree/raw/bullseye/debian/config/brcm80211/brcm/brcmfmac43436s-sdio.txt
+
+#d
+pushd $/files/lib/firmware/brcm
+ sed -i '/files/lib/firmware/brcm/brcmfmac43436-sdio.bin'
+ sed -i '/files/lib/firmware/brcm/brcmfmac43436-sdio.txt'
+ sed -i '/files/lib/firmware/brcm/brcm/brcmfmac43436s-sdio.bin'
+ sed -i '/files/lib/firmware/brcm/brcmfmac43436s-sdio.txt'
+popd
