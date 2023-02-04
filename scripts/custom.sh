@@ -2,7 +2,7 @@
 #=================================================
 # Description: DIY script
 # Lisence: MIT
-# Author: P3TERX
+# Author: P3TERXf
 # Blog: https://p3terx.com
 #=================================================
 # Modify default IP
@@ -27,6 +27,7 @@ sed -i 's/\/bin\/ash/\/usr\/bin\/zsh/g' package/base-files/files/etc/passwd
 
 
 #d
+mkdir /files/lib/firmware/brcm
 pushd $/files/lib/firmware/brcm
  sed -i '/files/lib/firmware/brcm/brcmfmac43436-sdio.bin'
  sed -i '/files/lib/firmware/brcm/brcmfmac43436-sdio.txt'
